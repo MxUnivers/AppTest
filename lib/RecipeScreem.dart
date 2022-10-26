@@ -33,7 +33,8 @@ class RecipeScreem extends StatelessWidget {
             style: ButtonStyle(
               foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
             ),
-            onPressed: () => showDialog<String>(
+            onPressed: () =>
+                showDialog<String>(
               context: context,
               builder: (BuildContext context) => AlertDialog(
                 title: const Text('AlertDialog Title'),

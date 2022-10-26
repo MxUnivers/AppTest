@@ -1,3 +1,4 @@
+import 'package:appflutter/GroupAlert.dart';
 import 'package:appflutter/RecipeScreem.dart';
 import 'package:flutter/material.dart';
 void main() {
@@ -10,10 +11,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+        initialRoute: '/',
+        routes: {
+          '/': (context) => RecipeScreem(),
+          '/second': (context) => const  GroupAlert() ,
+        },
       theme: ThemeData(
         primarySwatch: Colors.red,
-      ),
-      home: RecipeScreem()
+      )
     );
   }
 }

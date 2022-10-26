@@ -15,6 +15,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
    _FavoriteWidgetState(this._isFavorite , this._favoriteCount);
 
   void _toggleButton() {
+    Navigator.pushNamed(context, '/second');
     setState(() {
       if(_isFavorite){
         _isFavorite = false;
