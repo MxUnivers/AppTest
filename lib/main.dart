@@ -1,11 +1,12 @@
-import 'package:appflutter/GroupAlert.dart';
-import 'package:appflutter/RecipeScreem.dart';
+
+import 'package:appflutter/Home.dart';
 import 'package:flutter/material.dart';
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,8 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
         initialRoute: '/',
         routes: {
-          '/': (context) => RecipeScreem(),
-          '/second': (context) => const  GroupAlert() ,
+          '/': (context) => Home()
         },
       theme: ThemeData(
         primarySwatch: Colors.red,
