@@ -22,18 +22,119 @@ class _HomeState extends State<Home> {
               title: Text("Jumia"),
               backgroundColor: Colors.black54,
             ),
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.blueGrey,
             body:
-            Column(
-              verticalDirection: VerticalDirection.down,
-              crossAxisAlignment: CrossAxisAlignment.center,
+            ListView(scrollDirection: Axis.vertical,
               children: [
-                const TextField(
+                TextField(
                   obscureText: true,
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'rechercher sur jumia',
-                    hintText: "rechercher sur jumia "
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(borderRadius: BorderRadius.horizontal()),
+                    hintText: "rechercher sur jumia ",
+                    hintStyle: TextStyle(color: Colors.white),
+                    labelText: "text"
+                  ),
+                ),
+                // Image en question
+                Image.asset(
+                  'images/fraise.jpg' ,
+                  width:double.infinity,
+                  height: 300.0,)
+                ,
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,verticalDirection: VerticalDirection.down,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Column(
+                            children: [
+                              ElevatedButton(
+                                onPressed: (){},
+                                style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                                child: Icon(Icons.shopify ,  size: 50.0),
+                              ),
+                              Text("Nos marques",style: TextStyle(),)
+                            ],
+                          ),
+
+                          Column(
+                            children: [
+                              ElevatedButton(onPressed: (){}, child: Icon(Icons.airplanemode_active ,  size: 50.0),),
+                              Text("Jumia Gold",style: TextStyle(),)
+                            ],
+                          )
+                          ,
+                          Column(
+                            children: [
+                              ElevatedButton(
+                                onPressed: (){},
+                                style: ElevatedButton.styleFrom(backgroundColor: Colors.deepOrangeAccent),
+                                child: Icon(Icons.food_bank ,  size: 50.0),
+                              ),
+                              Text("Jumia Food",style: TextStyle(),)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              ElevatedButton(
+                                onPressed: (){},
+                                style: ElevatedButton.styleFrom(backgroundColor: Colors.blueGrey),
+                                child: Icon(Icons.mobile_friendly ,  size: 50.0),
+                              ),
+                              Text("Recharge mobile",style: TextStyle(),)
+                            ],
+                          )
+                        ],
+                      )
+                      ,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Column(
+                            children: [
+                              ElevatedButton(
+                                onPressed: (){},
+                                style: ElevatedButton.styleFrom(backgroundColor: Colors.orangeAccent),
+                                child: Icon(Icons.power ,  size: 50.0),
+                              ),
+                              Text("Jumia Prime",style: TextStyle(),)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              ElevatedButton(
+                                onPressed: (){},
+                                style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                                child: Icon(Icons.price_change ,  size: 50.0),
+                              ),Text("Tout a 400 fcfa",style: TextStyle(),)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              ElevatedButton(
+                                onPressed: (){},
+                                style: ElevatedButton.styleFrom(backgroundColor: Colors.grey),
+                                child: Icon(Icons.add_business_outlined ,  size: 50.0),
+                              ),Text("Supermarché",style: TextStyle(),)
+                            ],
+                          ),Column(
+                            children: [
+                              ElevatedButton(
+                                onPressed: (){},
+                                style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                                child: Icon(Icons.price_change ,  size: 50.0),
+                              ),Text("Commande par",style: TextStyle(),)
+                              ,Text("téléphone",style: TextStyle(),)
+                            ],
+                          ),
+                        ],
+                      ),
+                      Row()
+                    ],
                   ),
                 )
               ],
